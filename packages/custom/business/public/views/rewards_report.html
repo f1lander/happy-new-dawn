@@ -1,0 +1,30 @@
+<md-content>
+  <div layout="row" layout-margin>
+    <h1>{{title}}</h1>
+  </div>
+
+  <div layout="row" layout-margin>
+    <md-datepicker ng-model="birthday" md-placeholder="inicio"></md-datepicker>
+    <md-datepicker ng-model="birthday" md-placeholder="final"></md-datepicker>
+    <md-button class="md-primary">Buscar</md-button>
+  </div>
+
+  <div layout="row" layout-margin>
+    <table>
+      <thead>
+        <tr>
+            <th data-field="id">Rank</th>
+            <th data-field="name">Nombre</th>
+            <th data-field="name">Puntos</th>
+        </tr>
+      </thead>
+      <tbody ng-repeat="reward in rewards">
+        <tr>
+          <td>{{reward.rank}}</td>
+          <td>{{reward.name}}</td>
+          <td>{{reward.points}}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</md-content>

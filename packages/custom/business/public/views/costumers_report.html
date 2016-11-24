@@ -1,0 +1,32 @@
+<md-content>
+  <div layout="row" layout-margin>
+    <h1>{{title}}</h1>
+  </div>
+
+  <div layout="row" layout-margin>
+    <md-datepicker ng-model="birthday" md-placeholder="inicio"></md-datepicker>
+    <md-datepicker ng-model="birthday" md-placeholder="final"></md-datepicker>
+    <md-button class="md-primary">Buscar</md-button>
+  </div>
+
+  <div layout="row" layout-margin>
+    <table>
+      <thead>
+        <tr>
+            <th data-field="id">Rank</th>
+            <th data-field="name">Puntos</th>
+            <th data-field="name">Nombre</th>
+            <th data-field="price">Correo</th>
+        </tr>
+      </thead>
+      <tbody ng-repeat="costumer in costumers">
+        <tr>
+          <td>{{costumer.rank}}</td>
+          <td>{{costumer.points}}</td>
+          <td>{{costumer.name}}</td>
+          <td>{{costumer.email}}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</md-content>
